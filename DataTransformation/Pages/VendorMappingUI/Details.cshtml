@@ -1,0 +1,91 @@
+﻿@page
+@model DataTransformation.Pages.VendorMappingUI.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>VendorMapping</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.VendorMapping.DT_XML)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.VendorMapping.DT_XML)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.VendorMapping.RO_XML)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.VendorMapping.RO_XML)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.VendorMapping.DDDS_XML)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.VendorMapping.DDDS_XML)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.VendorMapping.RO_TRSFM_LOGIC)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.VendorMapping.RO_TRSFM_LOGIC)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.VendorMapping.DT_TRSFM_LOGIC)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.VendorMapping.DT_TRSFM_LOGIC)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.VendorMapping.DDDS_TRSFM_LOGIC)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.VendorMapping.DDDS_TRSFM_LOGIC)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.VendorMapping.CDM_MAPPING)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.VendorMapping.CDM_MAPPING)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.VendorMapping.DB_FIELD_NM)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.VendorMapping.DB_FIELD_NM)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.VendorMapping.UI_FIELD_NM)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.VendorMapping.UI_FIELD_NM)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.VendorMapping.COMMENTS)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.VendorMapping.COMMENTS)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.VendorMapping.CREATE_DT)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.VendorMapping.CREATE_DT)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.VendorMapping.EDIT_DT)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.VendorMapping.EDIT_DT)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.VendorMapping.MappingID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

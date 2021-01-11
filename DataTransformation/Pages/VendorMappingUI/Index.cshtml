@@ -1,0 +1,102 @@
+﻿@page
+@model DataTransformation.Pages.VendorMappingUI.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.VendorMapping[0].DT_XML)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VendorMapping[0].RO_XML)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VendorMapping[0].DDDS_XML)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VendorMapping[0].RO_TRSFM_LOGIC)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VendorMapping[0].DT_TRSFM_LOGIC)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VendorMapping[0].DDDS_TRSFM_LOGIC)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VendorMapping[0].CDM_MAPPING)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VendorMapping[0].DB_FIELD_NM)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VendorMapping[0].UI_FIELD_NM)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VendorMapping[0].COMMENTS)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VendorMapping[0].CREATE_DT)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VendorMapping[0].EDIT_DT)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.VendorMapping) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DT_XML)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RO_XML)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DDDS_XML)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RO_TRSFM_LOGIC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DT_TRSFM_LOGIC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DDDS_TRSFM_LOGIC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CDM_MAPPING)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DB_FIELD_NM)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UI_FIELD_NM)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.COMMENTS)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CREATE_DT)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EDIT_DT)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.MappingID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.MappingID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.MappingID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

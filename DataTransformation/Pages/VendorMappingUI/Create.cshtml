@@ -1,0 +1,90 @@
+﻿@page
+@model DataTransformation.Pages.VendorMappingUI.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>VendorMapping</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="VendorMapping.DT_XML" class="control-label">DT XML Mapping Path:</label>
+                <input asp-for="VendorMapping.DT_XML" class="form-control" />
+                <span asp-validation-for="VendorMapping.DT_XML" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VendorMapping.DT_TRSFM_LOGIC" class="control-label">DT Transformation Logic:</label>
+                <input asp-for="VendorMapping.DT_TRSFM_LOGIC" class="form-control" />
+                <span asp-validation-for="VendorMapping.DT_TRSFM_LOGIC" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VendorMapping.RO_XML" class="control-label">RO XML Mapping Path:</label>
+                <input asp-for="VendorMapping.RO_XML" class="form-control" />
+                <span asp-validation-for="VendorMapping.RO_XML" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VendorMapping.RO_TRSFM_LOGIC" class="control-label">RO Transformation Logic:</label>
+                <input asp-for="VendorMapping.RO_TRSFM_LOGIC" class="form-control" />
+                <span asp-validation-for="VendorMapping.RO_TRSFM_LOGIC" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VendorMapping.DDDS_XML" class="control-label">DDDS XML Mapping Path:</label>
+                <input asp-for="VendorMapping.DDDS_XML" class="form-control" />
+                <span asp-validation-for="VendorMapping.DDDS_XML" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VendorMapping.DDDS_TRSFM_LOGIC" class="control-label">DDDS Transformation Logic:</label>
+                <input asp-for="VendorMapping.DDDS_TRSFM_LOGIC" class="form-control" />
+                <span asp-validation-for="VendorMapping.DDDS_TRSFM_LOGIC" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VendorMapping.CDM_MAPPING" class="control-label">CDM Mapping Path:</label>
+                <input asp-for="VendorMapping.CDM_MAPPING" class="form-control" />
+                <span asp-validation-for="VendorMapping.CDM_MAPPING" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VendorMapping.UI_FIELD_NM" class="control-label">UI Field Name:</label>
+                <input asp-for="VendorMapping.UI_FIELD_NM" class="form-control" />
+                <span asp-validation-for="VendorMapping.UI_FIELD_NM" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VendorMapping.DB_FIELD_NM" class="control-label">Database Field Name:(Schema.DatabaseName.FieldName)</label>
+                <input asp-for="VendorMapping.DB_FIELD_NM" class="form-control" />
+                <span asp-validation-for="VendorMapping.DB_FIELD_NM" class="text-danger"></span>
+            </div>
+            
+            <div class="form-group">
+                <label asp-for="VendorMapping.COMMENTS" class="control-label">Comments:</label>
+                <input asp-for="VendorMapping.COMMENTS" class="form-control" />
+                <span asp-validation-for="VendorMapping.COMMENTS" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VendorMapping.CREATE_DT" class="control-label">Create Date:</label>
+                <input asp-for="VendorMapping.CREATE_DT" class="form-control" />
+                <span asp-validation-for="VendorMapping.CREATE_DT" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VendorMapping.EDIT_DT" class="control-label">Edit Date:</label>
+                <input asp-for="VendorMapping.EDIT_DT" class="form-control" />
+                <span asp-validation-for="VendorMapping.EDIT_DT" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
