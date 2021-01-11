@@ -30,6 +30,5 @@ jobs:
       uses: azure/webapps-deploy@v2
       with:
         app-name: 'CPWdatatransformation'
-        slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_d72cd7516acd41d2aac5b12b0ccffbf4 }}
         package: ${{env.DOTNET_ROOT}}/myapp 
